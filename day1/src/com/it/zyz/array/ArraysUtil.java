@@ -24,6 +24,11 @@ public class ArraysUtil {
         //5、int binarySearch(int [] a,int key)
         int[] array3=new int[]{11,23,54,66,78,93,222,334,777,987};
         int index=Arrays.binarySearch(array3,222);
-        System.out.println(index);
+        if (index>0){
+            System.out.println(index);
+        }else{
+            System.out.println("未找到！");
+        }
+
     }
 }
