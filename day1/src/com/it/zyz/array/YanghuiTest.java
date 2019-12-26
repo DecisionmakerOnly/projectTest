@@ -126,16 +126,54 @@ public class YanghuiTest {
 //            array3[i]=array3[array3.length-i-1];
 //            array3[array3.length-i-1]=temp;
 //        }
-        for (int i = 0,j=array3.length-1; i <j ; i++,j--) {
-            String temp=array3[i];
-            array3[i]=array3[j];
-            array3[j]=temp;
-        }
+//        for (int i = 0,j=array3.length-1; i <j ; i++,j--) {
+//            String temp=array3[i];
+//            array3[i]=array3[j];
+//            array3[j]=temp;
+//        }
         //遍历
         System.out.println("反转数组为：");
         for (int i = 0; i <array3.length ; i++) {
             System.out.print(array3[i]+"\t");
         }
-    
+        System.out.println();
+        //查找(线性查找、二分法查找)
+        //线性查找
+        String dest="DD";
+        boolean isFlag=true;
+        for (int i = 0; i < array3.length; i++) {
+            if (dest.equals(array3[i])){
+                System.out.println("找到指定元素了，位置为："+i);
+                isFlag=false;
+                break;
+            }
+        }
+        if (isFlag){
+            System.out.println("没有找到元素！"+dest);
+        }
+        //二分法查找:
+        //前提：所要查找的数组必须有序
+        int[] array6=new int[]{-98,-88,-33,0,1,22,44,59,89};
+
+        int dest1=1;
+        int head=0;//初始的首索引
+        int end=array6.length-1;//初始的末索引
+        boolean isFalse=true;
+
+        while (head <=end){
+            int middle=(head+end)/2;
+            if(dest1 ==array6[middle]){
+                System.out.println("找到指定元素了，位置为："+middle);
+                isFalse=false;
+                break;
+            }else if(array6[middle] >dest1){
+                end=middle-1;
+            }else{
+                head=middle+1;
+            }
+        }
+        if(isFalse){
+            System.out.println("没有找到元素！"+dest1);
+        }
     }
 }
