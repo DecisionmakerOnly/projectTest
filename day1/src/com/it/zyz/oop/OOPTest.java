@@ -20,7 +20,7 @@ public class OOPTest {
     }
 }
 class Person{
-    //属性
+    //属性()
     String name;
     int age;
     boolean isMale;
