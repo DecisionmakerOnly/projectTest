@@ -128,7 +128,7 @@ public class YanghuiTest {
 //        }
 //        for (int i = 0,j=array3.length-1; i <j ; i++,j--) {
 //            String temp=array3[i];
-//            array3[i]=array3[j];
+//            array3[i]=array3[j];z
 //            array3[j]=temp;
 //        }
         //遍历
