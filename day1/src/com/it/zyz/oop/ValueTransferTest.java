@@ -34,7 +34,6 @@ public class ValueTransferTest {
         m=n;
         m=temp;
     }
-//2020年第一天上班，我的愿望是能够找个好的工作。我想回家装修房子可是没有钱呀！
 }
 class Order{
     int orderId;
