@@ -10,7 +10,7 @@ public class AnimalTest {
          * 面向对象的特征一：封装于隐藏
          */
         Animal animal=new Animal();
-        animal.name="大黄";
+        animal.name="孙悟空";
         animal.age=1;
 //        animal.legs=-4;
         animal.setLegs(-10);
