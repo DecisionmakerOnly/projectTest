@@ -14,7 +14,7 @@ public class ArrayTest {
         int[] ids;//声明
         // 1.1 静态初始化:数组的初始化和数组元素的赋值操作同时进行
         ids=new int[]{1001,1002,1003,1004};//初始化
-        // 1.2动态初始化:数组的初始化和数组元素的赋值操作分开进行
+        // 1.2动态初始化:数组的初 始化和数组元素的赋值操作分开进行
         String[] names=new String[5];
         // 2.如何调用数组的指定位置的元素
         // 数组的角标(或索引)从0开始的,到数组的长度-1结束。
@@ -22,7 +22,7 @@ public class ArrayTest {
         names[1]="孙悟空";
         names[2]="鲤鱼王";
         names[3]="黑熊精";
-        names[4]="九灵元圣";
+        names[4]="九灵元圣";                                                                                                                                                                                                                                                                                                                                                                
         //3.如何获取数组的长度
         //属性length;
         System.out.println(names.length);
@@ -66,7 +66,6 @@ public class ArrayTest {
         }
         System.out.println("===========数组的内存解析=================");
         //6.数组的内存解析
-
         int[][] a =new int[][]{{1,2},{3,4}}; //静态初始化
         int [][] aa=new int[1][2];
     }

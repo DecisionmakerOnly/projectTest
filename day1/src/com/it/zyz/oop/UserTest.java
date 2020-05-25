@@ -12,7 +12,8 @@ public class UserTest {
         System.out.println(user.age);
         System.out.println(user.isMale);
 
-        user.talk("河南话");
+        user.talk("金箍棒");
+        user.eat();
     }
 }
 class User{
@@ -25,7 +26,8 @@ class User{
         System.out.println("我们使用："+language+"进行交流");
     }
     public void eat(){
-        String food="桃子";//局部变量
+        String food="桃子和仙丹";//局部变量
         System.out.println("孙悟空喜欢吃"+food);
+
     }
 }

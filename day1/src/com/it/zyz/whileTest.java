@@ -5,6 +5,23 @@ package com.it.zyz;
  */
 public class whileTest {
     public static void main(String[] args) {
+        Runnable r1 = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("我爱北京天安门");
+            }
+        };
+
+        r1.run();
+
+        System.out.println("***********************");
+
+        Runnable r2 = () -> System.out.println("我爱北京故宫");
+
+        r2.run();
+
+
+
         /**
          *  while 循环的使用：
          *  一、循环结构的四要素
@@ -25,12 +42,12 @@ public class whileTest {
          * ​	  区别：for 循环和while循环的初始化条件的作用范围不同。
          */
 //        遍历100以内的所有偶数
-        int i=1;
-        while (i<=100){
-            if(i %2==0){
-                System.out.println(i);
-            }
-            i++;
-        }
+//        int i=1;
+//        while (i<=100){
+//            if(i %2==0){
+//                System.out.println(i);
+//            }
+//            i++;
+//        }
     }
 }
