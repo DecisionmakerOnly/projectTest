@@ -15,5 +15,6 @@ public class ArrayExercise {
         }
         System.out.println("总和为："+sum);
         System.out.println("ss");
+        System.out.println("ssssswwes");
     }
 }
