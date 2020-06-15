@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="message">
+			{{message}}
+			<hr />
+			<label for="male">
+				<input type="radio" id="male" name="sex" value="男" v-model="sex"/>男
+			</label>
+			<label for="female">
+				<input type="radio" id="female" name="sex" value="女" v-model="sex"/>女
+			</label>
+			<h2>您选择的是：{{sex}}</h2>
+			<hr />
+			<label for="agree">
+				<input type="checkbox" id="agree" v-model="isAgree"/>同意协议
+			</label>
+			<h2>您选择的是：{{isAgree}}</h2>
+			<button :disabled="!isAgree">下一步</button>
+			<hr />
+			<input type="checkbox" value="孙悟空" v-model="hobbies"/>孙悟空
+			<input type="checkbox" value="东皇太一" v-model="hobbies"/>东皇太一
+			<input type="checkbox" value="杨戬" v-model="hobbies"/>杨戬
+			<input type="checkbox" value="哪吒" v-model="hobbies"/>哪吒
+			<h2>您的队友是：{{hobbies}}</h2>
+			<hr />
+			<select name="abc" id="" v-model="arms">
+				<option value="金箍棒" >金箍棒</option>
+				<option value="火尖抢" >火尖抢</option>
+				<option value="阴阳镜" >阴阳镜</option>
+				<option value="轩辕剑" >轩辕剑</option>
+			</select>
+			<h2> 您选择的武器是：{{arms}}</h2>
+			<hr />
+			<select name="abc" id="" v-model="armss" multiple>
+				<option value="金箍棒" >金箍棒</option>
+				<option value="火尖抢" >火尖抢</option>
+				<option value="阴阳镜" >阴阳镜</option>
+				<option value="轩辕剑" >轩辕剑</option>
+			</select>
+			<h2> 您选择的武器是：{{armss}}</h2>
+			<hr />
+			<label v-for="item in armes" :for="item">
+				<input type="checkbox" :value="item" :id="item" v-model="armsss" />{{item}}
+			</label>
+			<h2> 您选择的武器是：{{armsss}}</h2>
+			<hr />
+			<!-- 修饰符 -->
+			<input type="text" v-model.lazy="message2" />
+			<h2>{{message2}}</h2>
+			<input type="number" v-model.number="age"/>
+			<h2>{{age}}-{{typeof age}}</h2>
+			<input type="text" v-model.trim="trimm" />
+			<h2>{{trimm}}</h2>
+		</div>
+		
+		
+		<script>
+			const app=new Vue({
+				el:'#app',
+				data:{
+					message:'hello v-model',
+					message2:'ha',
+					age:0,
+					sex:'男',
+					isAgree:false,
+					hobbies:[],
+					arms:'',
+					armss:[],
+					armes:['金箍棒','火尖抢','阴阳镜','轩辕剑'],
+					armsss:[],
+					trimm:'',
+				}
+			})
+			
+		</script>
+	</body>
+</html>
