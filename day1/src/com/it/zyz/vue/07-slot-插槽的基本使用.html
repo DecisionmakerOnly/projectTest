@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--
+    1.插槽的基本使用<solt></solt>
+    2.插槽的默认值<solt><button>按钮</button></solt>
+    3.如果有多个值，同时放入到组件进行替换时，一定作为替换元素
+-->
+    <div id="app">
+        {{message}}
+        <cpn><button>按钮</button></cpn>
+        <cpn><span>这是一条神奇的天路</span></cpn>
+        <cpn></cpn>
+        <cpn></cpn>
+    </div>
+    <template id="cpn">
+        <div>
+            <h2>我是組件</h2>
+            <h2>我是組件。哈哈哈！！！</h2>
+            <slot></slot>
+        </div>
+    </template>
+<script>
+    const app=new Vue({
+        el:'#app',
+        data:{
+            message:'hello Vue'
+        },
+        components:{
+            cpn:{
+                template:'#cpn',
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!---->
+    <div id="app">
+        <h2>{{message}}</h2>
+        <hr/>
+        <cpn v-show="isShow"></cpn>
+    </div>
+    <template id="cpn">
+        <div>
+            <slot><span>这只是个开头</span></slot>
+            <span>这是内容吗？</span>
+        </div>
+    </template>
+<script>
+    const app=new Vue({
+        el:'#app',
+        data:{
+            message:'hello Vue',
+            isShow:true
+        },
+        components:{
+            cpn :{
+                template:'#cpn',
+                data(){
+                    return{
+                        isShow:false
+                    }
+                }
+            }
+        }
+    })
+
+</script>
+</body>
+</html>
